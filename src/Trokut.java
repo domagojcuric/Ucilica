@@ -43,7 +43,7 @@ public class Trokut {
     }
 
     public void setStranicaC(double stranicaC){
-        this.stranicaC = stranicaC
+        this.stranicaC = stranicaC;
     }
 
 }
