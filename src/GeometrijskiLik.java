@@ -7,7 +7,6 @@ public abstract class GeometrijskiLik {
     public abstract double opseg();
 
     GeometrijskiLik(String naziv){
-        super();
         this.naziv= naziv;
     }
 
