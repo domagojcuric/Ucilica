@@ -37,13 +37,29 @@ public class Trokut extends GeometrijskiLik {
         this.stranicaC = stranicaC;
     }
 
+
+    //provjerava se da li je trokut
+    public static boolean isValidTriangle(double stranicaA, double stranicaB, double stranicaC) {
+        return (stranicaA + stranicaB > stranicaC) && (stranicaA + stranicaC > stranicaB) && (stranicaB + stranicaC > stranicaA);
+    }
+
     @Override
     public double povrsina() {
-        return 0;
+        if(isValidTriangle(stranicaA, stranicaB, stranicaC)){
+            double opseg = stranicaA + stranicaB + stranicaC;
+            double poluOpseg = opseg / 2;
+            return Math.sqrt(poluOpseg * (poluOpseg - stranicaA) * (poluOpseg - stranicaB) * (poluOpseg - stranicaC));
+        }else {
+            return 0;
+        }
     }
 
     @Override
     public double opseg() {
-        return 0;
+        if(isValidTriangle(stranicaA, stranicaB, stranicaC)) {
+            return stranicaA + stranicaB + stranicaC;
+        }else {
+            return 0;
+        }
     }
 }
