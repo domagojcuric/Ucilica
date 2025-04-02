@@ -48,7 +48,7 @@ public class Trokut extends GeometrijskiLik {
         if(isValidTriangle(stranicaA, stranicaB, stranicaC)){
             double opseg = stranicaA + stranicaB + stranicaC;
             double poluOpseg = opseg / 2;
-            return Math.sqrt(poluOpseg * (poluOpseg - stranicaA) * (poluOpseg - stranicaB) * (poluOpseg - stranicaC));
+            return Math.sqrt(poluOpseg * (poluOpseg - stranicaA) * (poluOpseg - stranicaB) * (poluOpseg - stranicaC)); //Heronova formula
         }else {
             return 0;
         }
